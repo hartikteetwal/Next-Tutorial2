@@ -16,7 +16,7 @@ export const metadata = {
     notifications: React.ReactNode;
     login: React.ReactNode;
   }) {
-    const isLoggedin = false
+    const isLoggedin = true
     return (isLoggedin?
       <div>
         <div>{children}</div>

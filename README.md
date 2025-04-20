@@ -38,3 +38,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Noted Point
 parms or searchParams both use in the page.tsx but in the layout.jsx use only params not use searchParams
+
+## Intercepted concept
+in intercepted concept 
+(.) fefine root folder like ./  example ---> f1 folder
+(..) define parent folder like ../   example ---> f3 folder
+(..)(..) metch parent at the two level like ../../   example ---> f4 folder
+(...) use for root app dirictory example ---> f5 folder
