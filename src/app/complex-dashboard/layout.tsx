@@ -1,0 +1,35 @@
+export const metadata = {
+    title: "My Next.js App",
+    description: "A simple layout example",
+  };
+  
+  export default function ComplexDashboardLayout({
+    children,
+    revenue,
+    users,
+    notifications,
+    login
+  }: {
+    children: React.ReactNode;
+    revenue: React.ReactNode;
+    users: React.ReactNode;
+    notifications: React.ReactNode;
+    login: React.ReactNode;
+  }) {
+    const isLoggedin = false
+    return (isLoggedin?
+      <div>
+        <div>{children}</div>
+        <div style={{display:"flex"}}>
+        <div style={{display:"flex",flexDirection:"column"}}>
+            <div>{users}</div>
+            <div>{revenue}</div>
+        </div>
+        <div style={{display:"flex",flex:1}}>{notifications}</div>
+        </div>
+      </div>
+      :
+      login
+    );
+  }
+  

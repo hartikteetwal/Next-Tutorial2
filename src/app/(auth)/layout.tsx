@@ -2,7 +2,7 @@
 // import './style.css'
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
 
 const navLinks = [
     {name:"Register",href:"/register"},
@@ -14,12 +14,17 @@ const navLinks = [
     children,
   }:{children:React.ReactNode}){
     const pathname = usePathname()
+
+    const [input,setInput] = useState("")
     return(
         <div>
-            {navLinks.map(link=>{
+          <div>
+            <input type="text" value={input} onChange={(e)=>setInput(e.target.value)} />
+          </div>
+            {navLinks.map((link,index)=>{
                 const isActive = pathname === link.href || (pathname.startsWith("link.href")&&link.href!=="/")
                 return(
-                    <Link className={`${isActive?"font-bold mr-4":"text-blue-500 mr-4"}`} href={link.href}>{link.name}</Link>
+                    <Link key={index} className={`${isActive?"font-bold mr-4":"text-blue-500 mr-4"}`} href={link.href}>{link.name}</Link>
                 )
             })}
             {children}

@@ -6,6 +6,11 @@ export const metadata :Metadata ={
     }
 }
 
-export default function blog(){
+export default async function blog(){
+    await new Promise((resolve)=>{
+        setTimeout(() => {
+            resolve("Interntional delay!");
+        }, 2000);
+    })
     return <h1>I am blog</h1>
 }

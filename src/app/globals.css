@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+button{
+    border: 1px solid black;
+    padding: 1px 2px;
+    border-radius: 20px;
+}
+a{
+    border: 1px solid black;
+    padding: 1px 8px;
+    border-radius: 20px;
+}
